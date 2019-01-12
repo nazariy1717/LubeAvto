@@ -1,0 +1,41 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.modalTrigger{  cursor: pointer;  }
+
+.image{
+  display: block;
+  max-width: 100%;
+}
+
+.section{
+  position: relative;
+}
+
+.hidden{
+  visibility: hidden;
+  display: none;
+}
+
+.m-auto{
+  display: block;
+  margin: auto!important;
+}
+
+.mb-0 {  margin-bottom: 0;    }
+.mb-15{  margin-bottom: 15px;  }
+.mb-30{  margin-bottom: 30px;  }
+.mb-45{  margin-bottom: 45px;  }
+.mb-75{  margin-bottom: 75px;  }
+
+
+.display-table{
+  display: table;
+  height: 100%;
+  width: 100%;
+  &__cell{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
