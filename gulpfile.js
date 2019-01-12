@@ -13,7 +13,7 @@ let gulp = require('gulp'),
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
-            baseDir: 'www'
+
         },
         notify: false
     });
@@ -57,7 +57,7 @@ gulp.task('build', [
     'tinypng:build'
 ]);
 
-gulp.task('watch', ['browser-sync', 'style:build','js:build'], function () {
+gulp.task('watch', ['browser-sync', 'style:build', 'js:build'], function () {
 
     watch('src/sass/**/*.scss', function(event, cb) {
         gulp.start('style:build');

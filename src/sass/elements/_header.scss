@@ -1,0 +1,20 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+.header{
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 0;
+  z-index: 9;
+  @media (max-width: $breakpoint-sm){
+    left: 0;
+    right: 0;
+  }
+  &__logo{
+    width: 155px;
+    height: 90px;
+    display: block;
+    overflow: hidden;
+  }
+}

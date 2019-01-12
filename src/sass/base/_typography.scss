@@ -1,7 +1,6 @@
 @import "../tools/mixins";
 @import "../tools/breakpoints";
 
-
 a{
   text-decoration: none;
   color: inherit;
@@ -15,120 +14,63 @@ a{
 
 .heading-1 {
   display: block;
-  font-family: 'Open Sans',sans-serif;
-  text-transform: uppercase;
-  font-size: 38px;
-  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-stretch: normal;
-  line-height: 42px;
-  letter-spacing: 0.8px;
-  color: var(--black);
+  font-weight: bold;
+  line-height: 58px;
+  font-size: 48px;
+  color: #fff;
   @media(max-width: $breakpoint-lg){
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 42px;
+    line-height: 48px;
     padding-left: 0;
   }
   @media(max-width: $breakpoint-md){
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 32px;
+    line-height: 36px;
   }
   @media(max-width: $breakpoint-sm){
-    font-size: 18px;
+    font-size: 24px;
     line-height: 24px;
-  }
-  &.--modifier:after{
-    display: none;
-  }
-  &.--white{
-    color: #fff;
   }
 }
 
 .heading-2 {
-  position: relative;
-  display: block;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-  color: var(--black);
-  padding-left: 25px;
-  @media(max-width: $breakpoint-lg){
-    font-size: 20px;
-    line-height: 24px;
-    padding-left: 0;
-  }
-  @media(max-width: $breakpoint-md){
-    font-size: 18px;
-  }
-  @media(max-width: $breakpoint-sm){
-    font-size: 14px;
-    line-height: 20px;
-  }
-  &:before{
-    content: '';
-    position: absolute;
-    transform: translateX(-25px);
-    bottom: -6px;
-    height: 4px;
-    width: 60px;
-    background-color: var(--reddish);
-    @media(max-width: $breakpoint-sm){
-      transform: translateX(-10px);
-      height: 2px;
-      width: 35px;
-      bottom: initial;
-      top: 20px;
-    }
-  }
-  &.--white{
-    color: #fff;
-  }
-  &.--modifier{
-    padding-left: 0;
-    &:before{
-      display: none;
-    }
-  }
+
 }
 
 .heading-3 {
   display: block;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-  color: var(--black);
+  font-weight: 600;
+  line-height: 32px;
+  font-size: 24px;
+  color: #fff;
   @media(max-width: $breakpoint-lg){
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 24px;
   }
   @media (max-width: $breakpoint-sm) {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 .heading-4 {
   display: block;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-stretch: normal;
-  line-height: 20px;
-  letter-spacing: normal;
-  color: var(--black);
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 18px;
+  @media(max-width: $breakpoint-lg){
+    font-size: 16px;
+  }
+  @media (max-width: $breakpoint-sm) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 .app-txt{
@@ -136,7 +78,7 @@ a{
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
-  color: var(--primary-black);
+  color: #fff;
   @media (max-width: $breakpoint-sm) {
     font-size: 12px;
     line-height: 18px;

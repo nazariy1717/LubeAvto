@@ -1,0 +1,52 @@
+@import "../tools/mixins";
+@import "../tools/breakpoints";
+
+
+.grid-layout{
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: auto;
+  max-width: 1170px;
+  padding: 0 15px;
+  display: flex;
+  pointer-events: none;
+  @media (max-width: $breakpoint-sm){
+    display: none;
+  }
+  &__item{
+    @include grid-size(33.333333%);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    &:last-child{
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+.primary-screen{
+  height: 100%;
+  min-height: 100vh;
+  padding: 175px 0;
+  background: url("/dist/img/app-bg.png") center bottom no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  &__subtitle{
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  &__title{
+    color: var(--orange);
+    margin-bottom: 60px;
+  }
+  &__item{
+    padding-right: 30px;
+    @media (max-width: $breakpoint-sm) {
+      padding-right: 0;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -2,15 +2,9 @@
 @import "../tools/breakpoints";
 
 .container {
-  max-width: 1140px;
+  max-width: 1170px;
   padding: 0 15px;
   margin: auto;
-  @media (max-width: $breakpoint-lg) {
-    padding: 0 40px;
-  }
-  @media (max-width: $breakpoint-sm) {
-    padding: 0 35px;
-  }
 }
 
 .row {
