@@ -28,7 +28,7 @@
     <div class="grid-layout__item"></div>
 </div>
 
-<div class="phone">
+<div class="phone modalTrigger" data-modal="#contact-modal">
     <i class="phone__icon icon-phone-2"></i>
 </div>
 
@@ -79,12 +79,59 @@
 <section class="app-testimonials">
     <div class="container">
         <div class="app-testimonials__content">
-
+            .
         </div>
     </div>
 </section>
 
-<footer>
+<footer class="footer">
+    <div class="container">
+        <div class="row ">
+            <div class=" col-md-4 col-xs-12">
+                <a href="/" class="footer__logo">
+                    <img src="dist/img/logo.svg" alt="site logo" title="site logo">
+                </a>
+                <a href="/" class="footer__logo-link">Наш основний сайт</a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="footer__item">
+                    <i class="icon-marker"></i>
+                    <p>
+                        <span>с. Зимна Вода,</span>
+                        <span>Вул. Яворівська, 2г</span>
+                        <span>(Кільце на Городоцькій)</span>
+                    </p>
+                </div>
+                <ul class="social-list">
+                    <li class="social-list__item">
+                        <a href="/" class="social-list__link icon-facebook" target="_blank" rel="nofollow"></a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="/" class="social-list__link icon-twitter" target="_blank" rel="nofollow"></a>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="/" class="social-list__link icon-instagram" target="_blank" rel="nofollow"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="footer__item">
+                    <i class="icon-phone-1"></i>
+                    <p>
+                        <a href="tel:+38 (067) 212-5249">+38 (067) 212-5249</a>
+                        <a href="tel:+38 (068) 744-6595">+38 (068) 744-6595</a>
+                        <a href="tel:+38 (098) 348-7772">+38 (098) 348-7772</a>
+                    </p>
+                </div>
+                <div class="footer__item">
+                    <i class="icon-letter"></i>
+                    <p>
+                        <a href="mailto:lubeavto@gmail.com">lubeavto@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="copyright">
         <div class="container">
             <div class="row m-row align-middle align-justify">
@@ -98,6 +145,47 @@
         </div>
     </div>
 </footer>
+
+
+<div class="modal" id="contact-modal" style="display: block">
+    <div class="modal__body">
+        <div class="modal__content">
+            <span class="modal__close icon-close js-close-modal"></span>
+            <span class="heading-4 modal__title">Зв’яжіться з нами</span>
+            <div class="row m-row">
+                <div class="column col-md-6 col-xs-12">
+                    <div class="modal__item">
+                        <i class="icon-marker"></i>
+                        <p>
+                            <span>с. Зимна Вода,</span>
+                            <span>Вул. Яворівська, 2г</span>
+                            <span>(Кільце на Городоцькій)</span>
+                        </p>
+                    </div>
+                    <div class="modal__item">
+                        <i class="icon-letter"></i>
+                        <p>
+                            <a href="mailto:lubeavto@gmail.com">lubeavto@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="column col-md-6 col-xs-12">
+                    <div class="modal__item">
+                        <i class="icon-phone-1"></i>
+                        <p>
+                            <a href="tel:+38 (067) 212-5249">+38 (067) 212-5249</a>
+                            <a href="tel:+38 (068) 744-6595">+38 (068) 744-6595</a>
+                            <a href="tel:+38 (098) 348-7772">+38 (098) 348-7772</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="/dist/img/bmw.png" class="modal__img" alt="popup img" title="popup img">
+        </div>
+    </div>
+</div>
+
+
 
 <script src="dist/js/libs/jquery-3.2.1.min.js"></script>
 <script src="dist/js/frontend.js"></script>

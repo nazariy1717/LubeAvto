@@ -25,7 +25,6 @@
   }
 }
 
-
 .primary-screen{
   height: 100%;
   min-height: 100vh;
@@ -182,39 +181,14 @@
   }
 }
 
-
-
 .app-testimonials{
   margin-bottom: 100px;
   &__content{
     position: relative;
     height: 720px;
-    background: url('/dist/img/Object.png') center #E85920 no-repeat;
+    background: url('/dist/img/testimonials-bg.png') center #E85920 no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     border-radius: 5px;
-    &:before{
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: radial-gradient(721.01px at 40.92% 34.81%, #E85920 0%, #C55220 20.17%, #CE8B45 77.18%, #C26F19 100%);
-      mix-blend-mode: normal;
-      opacity: 0.5;
-      transform: rotate(-180deg);
-    }
-    &:after{
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: radial-gradient(811.24px at 100% -16.15%, #DCEDC8 0%, #C3DEA5 22.7%, rgba(158, 200, 114, 0.0001) 68.13%, rgba(124, 179, 66, 0.0001) 100%);
-      mix-blend-mode: normal;
-      opacity: 0.45;
-    }
   }
 }
