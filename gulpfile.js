@@ -41,7 +41,7 @@ gulp.task('fonts:build', () =>
 );
 
 gulp.task('tinypng:build', () => {
-    gulp.src('dist/img/**/*.*')
+    gulp.src('dist/img/**/*.png')
         .pipe(tingpng('D7rjw4lXFTG6Vz6TJ4534pz2xbl89pZK'))
         .pipe(gulp.dest('dist/img/'))
 });
