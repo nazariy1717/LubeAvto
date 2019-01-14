@@ -12,9 +12,7 @@ let gulp = require('gulp'),
 
 gulp.task('browser-sync', function () {
     browserSync({
-        server: {
-
-        },
+        server: {},
         notify: false
     });
 });
@@ -33,7 +31,7 @@ gulp.task('js:build', () =>
         .pipe(babel({
             presets: ['env']
         }))
-        .pipe(minifyjs())
+        // .pipe(minifyjs())
         .pipe(gulp.dest('dist/js/'))
 );
 
@@ -71,9 +69,9 @@ gulp.task('watch', ['browser-sync', 'style:build', 'js:build'], function () {
     // // //     gulp.start('tinypng:build');
     // // // });
     // // //
-    watch('src/fonts/**/*.*', function(event, cb) {
-        gulp.start('fonts:build');
-    });
+    // watch('src/fonts/**/*.*', function(event, cb) {
+    //     gulp.start('fonts:build');
+    // });
 
 });
 

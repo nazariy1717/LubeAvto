@@ -61,6 +61,9 @@ a{
   line-height: 32px;
   font-size: 24px;
   color: #fff;
+  &.--regular{
+    font-weight: normal;
+  }
   @media(max-width: $breakpoint-lg){
     font-size: 18px;
     line-height: 24px;

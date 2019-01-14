@@ -1,1 +1,79 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('\'L A\';K(1(){n.4();0.4()});2 n={4:1 4(){6.7()},7:1 7(){2 3=6}};2 0={I:$(\'.d-t-0\'),H:$(\'.0\'),4:1 4(){6.7()},m:1 m(8){2 5=$(8);5.x();5.p(\'.u\').i(\'b-w\').h(\'b-v\');$(\'f,9\').h(\'d-0\');$(\'f,9\').E(\'s r q\')},c:1 c(8){2 5=$(8);5.p(\'.u\').i(\'b-v\').h(\'b-w\');5.F();$(\'f,9\').i(\'d-0\');$(\'f,9\').a(\'s r q\')},7:1 7(){$(j).a(\'g\',\'.z\',1(e){e.B();2 3=$(6),l=3.k(\'C-0\');0.m(l)});$(j).a(\'g\',\'.0\',1(o){2 3=\'#\'+$(6).k(\'8\');D(o.l.G==\'J\'){0.c(3)}});$(j).a(\'g\',\'.d-t-0\',1(){2 3=\'#\'+$(6).y(\'.0\').k(\'8\');0.c(3)})}};',48,48,'modal|function|var|self|init|modalWindow|this|events|id|body|on|animate|closeModal|js||html|click|addClass|removeClass|document|attr|target|openModal|frontend|event|find|touchmove|mousewheel|scroll|close|modal__content|in|away|fadeIn|closest|modalTrigger|strict|preventDefault|data|if|off|fadeOut|className|closeOverlay|closeButton|modal__body|jQuery|use'.split('|'),0,{}))
+'use strict';
+
+jQuery(function () {
+    frontend.init();
+    modal.init();
+});
+
+var frontend = {
+
+    init: function init() {
+        this.events();
+    },
+
+    openTab: function openTab(element, tabName) {
+        var i = void 0,
+            tab_content = document.getElementsByClassName('tab-content'),
+            tab_links = document.getElementsByClassName('tab-links');
+        for (i = 0; i < tab_content.length; i++) {
+            tab_content[i].style.display = "none";
+        }
+        for (i = 0; i < tab_links.length; i++) {
+            tab_links[i].className = tab_links[i].className.replace(" active", "");
+        }
+        document.querySelector(tabName).style.display = "block";
+        element.classList.add('active');
+    },
+
+    events: function events() {
+
+        var self = this;
+    }
+};
+
+var modal = {
+    closeButton: $('.js-close-modal'),
+    closeOverlay: $('.modal'),
+
+    init: function init() {
+        this.events();
+    },
+
+    openModal: function openModal(id) {
+        var modalWindow = $(id);
+        modalWindow.fadeIn();
+        modalWindow.find('.modal__content').removeClass('animate-away').addClass('animate-in');
+        $('html,body').addClass('js-modal');
+        $('html,body').off('scroll mousewheel touchmove');
+    },
+
+    closeModal: function closeModal(id) {
+        var modalWindow = $(id);
+        modalWindow.find('.modal__content').removeClass('animate-in').addClass('animate-away');
+        modalWindow.fadeOut();
+        $('html,body').removeClass('js-modal');
+        $('html,body').on('scroll mousewheel touchmove');
+    },
+
+    events: function events() {
+
+        $(document).on('click', '.modalTrigger', function (e) {
+            e.preventDefault();
+            var self = $(this),
+                target = self.attr('data-modal');
+            modal.openModal(target);
+        });
+
+        $(document).on('click', '.modal', function (event) {
+            var self = '#' + $(this).attr('id');
+            if (event.target.className == 'modal__body') {
+                modal.closeModal(self);
+            }
+        });
+
+        $(document).on('click', '.js-close-modal', function () {
+            var self = '#' + $(this).closest('.modal').attr('id');
+            modal.closeModal(self);
+        });
+    }
+};

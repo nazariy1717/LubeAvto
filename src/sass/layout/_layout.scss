@@ -190,6 +190,12 @@
     -webkit-background-size: cover;
     background-size: cover;
     border-radius: 5px;
+    @media (max-width: $breakpoint-lg){
+      padding: 60px 45px;
+    }
+    @media (max-width: $breakpoint-sm){
+      padding: 30px 15px;
+    }
   }
   &__title{
     margin-bottom: 30px;
@@ -198,12 +204,19 @@
     max-width: 605px;
     margin: auto auto 30px;
   }
+  &__tabs{
+    max-width: 700px;
+    margin: auto;
+  }
 }
 
 .testimonials-nav{
   position: relative;
   text-align: center;
-  margin: auto;
+  margin: auto auto 45px;
+  @media (max-width: $breakpoint-lg){
+    margin: auto auto 30px;
+  }
   &:after{
     content: '';
     position: absolute;
@@ -215,6 +228,15 @@
     transform: translateY(-50%);
     height: 2px;
     background-color: #F89358;
+    @media (max-width: $breakpoint-lg){
+      width: 455px;
+    }
+    @media (max-width: $breakpoint-md){
+      width: 300px;
+    }
+    @media (max-width: $breakpoint-sm){
+      width: 250px;
+    }
   }
   &__item{
     position: relative;
@@ -222,6 +244,15 @@
     display: inline-block;
     & + & {
       margin-left: 100px;
+      @media (max-width: $breakpoint-lg){
+        margin-left: 75px;
+      }
+      @media (max-width: $breakpoint-md){
+        margin-left: 50px;
+      }
+      @media (max-width: $breakpoint-sm){
+        margin-left: 30px;
+      }
     }
   }
   &__link{
@@ -235,6 +266,16 @@
     background: #E85920;
     border: 2px solid #F89358;
     transition: all 0.3s;
+    @media (max-width: $breakpoint-lg){
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+    @media (max-width: $breakpoint-md){
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+    }
     &.active{
       background-color: #fff;
       border: 2px solid #fff;
@@ -246,4 +287,32 @@
       color: var(--orange);
     }
   }
+}
+
+.tab-content {
+  display: none;
+  animation: fade-in .5s;
+  -webkit-animation: fade-in .5s;
+  &.active{
+    display: block;
+  }
+}
+
+.testimonials-tab{
+  @media (max-width: $breakpoint-lg){
+    text-align: center;
+  }
+  &__title{
+    margin-bottom: 15px;
+    @media (max-width: $breakpoint-lg){
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+}
+
+
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }

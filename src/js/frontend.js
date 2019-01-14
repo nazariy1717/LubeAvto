@@ -10,6 +10,20 @@ let frontend = {
         this.events();
     },
 
+    openTab: function (element, tabName) {
+        let i,
+            tab_content = document.getElementsByClassName('tab-content'),
+            tab_links = document.getElementsByClassName('tab-links');
+        for (i = 0; i < tab_content.length; i++) {
+            tab_content[i].style.display = "none";
+        }
+        for (i = 0; i < tab_links.length; i++) {
+            tab_links[i].className = tab_links[i].className.replace(" active", "");
+        }
+        document.querySelector(tabName).style.display = "block";
+        element.classList.add('active');
+    },
+
     events: function () {
 
         let self = this;
