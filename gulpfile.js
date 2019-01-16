@@ -21,7 +21,7 @@ gulp.task('style:build', () => {
     return gulp.src('src/sass/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
-        // .pipe(cssmin())
+        .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist/css'))
 });
